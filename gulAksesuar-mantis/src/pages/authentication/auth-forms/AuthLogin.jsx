@@ -49,7 +49,7 @@ export default function AuthLogin() {
     if (result.success) {
       toast.success('Giriş başarılı!');
       await authContext.fetchUser(); // Fetch user data
-      navigate('/'); // Redirect to home page
+      navigate('/panel/adminpanel'); // Redirect to home page
       window.location.reload();
     } else {
       toast.error(result.message);
@@ -129,7 +129,6 @@ export default function AuthLogin() {
                 )}
               </Grid>
 
-              
               {errors.submit && (
                 <Grid item xs={12}>
                   <FormHelperText error>{errors.submit}</FormHelperText>

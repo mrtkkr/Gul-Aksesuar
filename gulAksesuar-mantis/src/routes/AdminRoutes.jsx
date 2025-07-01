@@ -1,20 +1,16 @@
 // project import
 import Dashboard from 'layout/Dashboard';
 import LoginCheck from 'LoginCheck';
-
+import { Navigate } from 'react-router-dom';
 
 import PanelPage from 'pages/admin-pages/hantools/Panel/PanelPage';
 import CreateSnippetPage from 'pages/admin-pages/Snippet/CreateSnippetPage';
 
-
 import PanelProvider from 'contexts/admin/PanelContext';
 import SnippetProvider from 'contexts/admin/SnippetContext';
 
-
-
-
 const AdminRoutes = {
-  path: '/',
+  path: '/panel',
   element: (
     <LoginCheck>
       <PanelProvider>
@@ -26,11 +22,7 @@ const AdminRoutes = {
   ),
   children: [
     {
-      path: '/',
-      element: <PanelPage />
-    },
-    {
-      path: 'panel',
+      path: 'adminpanel',
       element: <PanelPage />
     },
     {
