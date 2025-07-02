@@ -27,6 +27,8 @@ import '@fontsource/public-sans/500.css';
 import '@fontsource/public-sans/600.css';
 import '@fontsource/public-sans/700.css';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // project import
 import App from './App';

@@ -1,3 +1,53 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+:root {
+  --primary: #6610f2;
+}
+
+.top-bar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #212529;
+  border-color: #dee2e6;
+}
+
+.background-primary,
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.navbar-brand {
+  color: var(--primary);
+}
+.navbar-brand i {
+  color: var(--primary);
+}
+.navbar-brand span {
+  color: var(--primary);
+}
+
+.btn-light i {
+  color: var(--primary);
+}
+
+.slider_nav {
+  max-height: 250px;
+}
+
+@media (min-width: 1200px) {
+  .slider_nav {
+    max-height: 300px;
+  }
+}
+@media (min-width: 1400px) {
+  .slider_nav {
+    max-height: 350px;
+  }
+}
