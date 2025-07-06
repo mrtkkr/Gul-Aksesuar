@@ -19,7 +19,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-light">
+    <div className="bg-light ">
       <header>
         <section className="top-bar">
           <div className="container">
@@ -113,7 +113,7 @@ const HomePage = () => {
         </nav>
       </header>
 
-      <section className="pt-3 pb-3">
+      <section className="mt-3 pb-3">
         <div className="container">
           <div className="card">
             <div className="row p-1 p-lg-2 gx-2">
@@ -171,6 +171,176 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <section className="mt-3">
+        <div className="container">
+          <h3 className="h4 mb-lg-3">Son Eklenenler</h3>
+          <div className="row row-cols-lg-4 row-cols-md-3 row-cols-2 g-2">
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/1.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/2.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/3.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/4.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/5.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card shadow">
+                <div className="img-wrap">
+                  <span className="badge bg-success">İndirim</span>
+                  <img src="http://localhost:8000/static/back_end/6.jpeg" alt="Ürün 1" className="card-img-top" />
+                </div>
+
+                <div className="border-top info-wrap">
+                  <a href="#" className="float-end btn btn-light">
+                    <i className="fa fa-heart"></i>
+                  </a>
+                  <a href="#" className="title text-truncate">
+                    Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
+                  </a>
+                  <div className="price-wrap">
+                    <span className="price-discount">45.999 ₺</span>
+                    <del className="price">49.999 ₺</del>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="mt-3 py-4 background-primary text-white">
+        <div className="container">
+          <div className="row gy-3">
+            <div className="col-md-6 col-lg-4">
+              <form>
+                <div className="input-group">
+                  <input type="email" className="form-control" placeholder="Email Giriniz." />
+                  <button type="button" className="btn btn-outline-warning">
+                    Abone Ol
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="col-md-6 col-lg-8 text-end">
+              <nav className="text-center text-md-end">
+                <a href="#" className="btn btn-icon btn-outline-warning">
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a href="#" className="btn btn-icon btn-outline-warning">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="#" className="btn btn-icon btn-outline-warning">
+                  <i className="fab fa-youtube"></i>
+                </a>
+                <a href="#" className="btn btn-icon btn-outline-warning">
+                  <i className="fab fa-x"></i>
+                </a>
+              </nav>
+            </div>
+            <div className="col-12">
+              <p className="text-center text-white-100 mb-0">© 2025 Tüm hakları saklıdır</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
