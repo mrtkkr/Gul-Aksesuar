@@ -77,10 +77,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     'http://localhost:3000',
 # ]
 # CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000',
-#     'http://192.168.1.100:3000',
-#     'http://172.25.48.1:3000',
-#     'http://192.168.1.152:3000',
+    # 'http://localhost:3000',
+    # 'http://localhost:8000',
+    # 'http://192.168.1.100:3000',
+    # 'http://172.25.48.1:3000',
+    # 'http://192.168.1.152:3000',
 # ]
 
 LOGGING = {
@@ -255,4 +256,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 

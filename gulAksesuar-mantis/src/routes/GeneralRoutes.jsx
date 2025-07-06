@@ -5,6 +5,8 @@ import { lazy } from 'react';
 // import Dashboard from 'layout/Dashboard';
 import LoginCheck from 'LoginCheck';
 import HomePage from 'pages/general-pages/homepages';
+import DetailsPage from 'pages/general-pages/detailsPage';
+import MyCartPage from 'pages/general-pages/myCartPage';
 
 const GeneralRoutes = {
   path: '/',
@@ -13,6 +15,14 @@ const GeneralRoutes = {
     {
       path: '/',
       element: <HomePage />
+    },
+    {
+      path: '/detailsPage',
+      element: <DetailsPage />
+    },
+    {
+      path: '/myCartPage',
+      element: <MyCartPage />
     }
   ]
 };

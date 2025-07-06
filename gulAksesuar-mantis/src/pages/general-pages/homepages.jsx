@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 // import { sendApiRequest, sendPublicApiRequest } from 'services/network_service';
 
 const HomePage = () => {
@@ -39,10 +39,10 @@ const HomePage = () => {
                     <i className="fa fa-heart"></i>
                     <span className="ms-1 d-none d-sm-inline-block">Listem</span>
                   </a>
-                  <a href="#" className="btn btn-light">
+                  <Link to="/myCartPage" className="btn btn-light">
                     <i className="fa fa-shopping-cart"></i>
                     <span className="ms-1 d-none d-sm-inline-block">Sepetim</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-5">
@@ -187,9 +187,9 @@ const HomePage = () => {
                   <a href="#" className="float-end btn btn-light">
                     <i className="fa fa-heart"></i>
                   </a>
-                  <a href="#" className="title text-truncate">
+                  <Link to="detailsPage" className="title text-truncate">
                     Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
-                  </a>
+                  </Link>
                   <div className="price-wrap">
                     <span className="price-discount">45.999 ₺</span>
                     <del className="price">49.999 ₺</del>
@@ -206,7 +206,7 @@ const HomePage = () => {
 
                 <div className="border-top info-wrap">
                   <a href="#" className="float-end btn btn-light">
-                    <i className="fa fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                   </a>
                   <a href="#" className="title text-truncate">
                     Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
@@ -269,7 +269,7 @@ const HomePage = () => {
 
                 <div className="border-top info-wrap">
                   <a href="#" className="float-end btn btn-light">
-                    <i className="fa fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                   </a>
                   <a href="#" className="title text-truncate">
                     Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
@@ -290,9 +290,9 @@ const HomePage = () => {
 
                 <div className="border-top info-wrap">
                   <a href="#" className="float-end btn btn-light">
-                    <i className="fa fa-heart"></i>
+                    <i className="fa-regular fa-heart"></i>
                   </a>
-                  <a href="#" className="title text-truncate">
+                  <a href="DetailsPage" className="title text-truncate">
                     Apple Watch Yıldız Işığı Alüminyum Kasa ve Spor Kordom{' '}
                   </a>
                   <div className="price-wrap">
