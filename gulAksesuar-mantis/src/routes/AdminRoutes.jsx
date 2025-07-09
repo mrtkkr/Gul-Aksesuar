@@ -5,12 +5,12 @@ import { Navigate } from 'react-router-dom';
 
 import PanelPage from 'pages/admin-pages/gulAksesuar/Panel/PanelPage';
 import CreateSnippetPage from 'pages/admin-pages/Snippet/CreateSnippetPage';
-import CategoryPage from 'pages/admin-pages/gulAksesuar/CategoryPage';
-import OrderPage from 'pages/admin-pages/gulAksesuar/OrderPage';
-import ProductPage from 'pages/admin-pages/gulAksesuar/ProductPage';
-import SliderPage from 'pages/admin-pages/gulAksesuar/SliderPage';
-import RolePage from 'pages/admin-pages/gulAksesuar/RolePage';
-import UsersPage from 'pages/admin-pages/gulAksesuar/UsersPage';
+import CategoryPage from 'pages/admin-pages/gulAksesuar/Category/CategoryPage';
+import OrderPage from 'pages/admin-pages/gulAksesuar/Order/OrderPage';
+import ProductPage from 'pages/admin-pages/gulAksesuar/Product/ProductPage';
+import SliderPage from 'pages/admin-pages/gulAksesuar/Slider/SliderPage';
+import RolePage from 'pages/admin-pages/gulAksesuar/Role/RolePage';
+import UsersPage from 'pages/admin-pages/gulAksesuar/Users/UsersPage';
 
 import PanelProvider from 'contexts/admin/PanelContext';
 import SnippetProvider from 'contexts/admin/SnippetContext';

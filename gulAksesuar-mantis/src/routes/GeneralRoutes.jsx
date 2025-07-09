@@ -4,7 +4,7 @@ import { lazy } from 'react';
 // import Dashboard2 from 'layout/Dashboard2';
 // import Dashboard from 'layout/Dashboard';
 import LoginCheck from 'LoginCheck';
-import HomePage from 'pages/general-pages/homepages';
+import HomePage from 'pages/general-pages/homePage';
 import DetailsPage from 'pages/general-pages/detailsPage';
 import MyCartPage from 'pages/general-pages/myCartPage';
 

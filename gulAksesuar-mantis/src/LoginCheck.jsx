@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import { useContext, useEffect, useState } from 'react';
@@ -10,6 +10,7 @@ const LoginCheck = ({ children }) => {
   const { user, isAuthenticated, fetchUser } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   const [redirect, setRedirect] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -45,6 +46,10 @@ const LoginCheck = ({ children }) => {
   // if (userGroup === 'CompanyEmployee') {
   //   return <Navigate to="/company-dashboard" />;
   // }
+  // 👇 Giriş yapılmışsa ve sadece /panel yolundaysa yönlendir:
+  if (location.pathname === '/panel') {
+    return <Navigate to="/panel/adminpanel" replace />;
+  }
 
   return children;
 };
