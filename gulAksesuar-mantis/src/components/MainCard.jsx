@@ -10,8 +10,8 @@ import Typography from '@mui/material/Typography';
 
 // header style
 const headerSX = {
-  p: 2.5,
-  '& .MuiCardHeader-action': { m: '0px auto', alignSelf: 'center' }
+  p: 3,
+  '& .MuiCardHeader-action': { m: '0 auto', alignSelf: 'center' }
 };
 
 function MainCard(
@@ -41,11 +41,14 @@ function MainCard(
       {...others}
       sx={{
         border: border ? '1px solid' : 'none',
-        borderRadius: 2,
-        borderColor: theme.palette.mode === 'dark' ? theme.palette.divider : theme.palette.grey.A800,
-        boxShadow: boxShadow && (!border || theme.palette.mode === 'dark') ? shadow || theme.customShadows.z1 : 'inherit',
+        borderRadius: 3,
+        borderColor: theme.palette.mode === 'dark' ? theme.palette.divider : theme.palette.grey[300],
+        backgroundColor: theme.palette.background.paper,
+        boxShadow:
+          boxShadow && (!border || theme.palette.mode === 'dark') ? shadow || theme.customShadows.z20 : '0px 4px 12px rgba(0, 0, 0, 0.05)',
+        transition: 'all 0.3s ease-in-out',
         ':hover': {
-          boxShadow: boxShadow ? shadow || theme.customShadows.z1 : 'inherit'
+          boxShadow: '0px 6px 16px rgba(0, 0, 0, 0.1)'
         },
         '& pre': {
           m: 0,
@@ -57,12 +60,24 @@ function MainCard(
       }}
     >
       {/* card header and action */}
-      {!darkTitle && title && <CardHeader sx={headerSX} titleTypographyProps={{ variant: 'subtitle1' }} title={title} action={secondary} />}
-      {darkTitle && title && <CardHeader sx={headerSX} title={<Typography variant="h3">{title}</Typography>} action={secondary} />}
+      {title && (
+        <CardHeader
+          sx={headerSX}
+          title={
+            darkTitle ? (
+              <Typography variant="h5" sx={{ fontWeight: 600 }}>
+                {title}
+              </Typography>
+            ) : (
+              title
+            )
+          }
+          action={secondary}
+        />
+      )}
 
       {/* card content */}
-      {content && <CardContent sx={contentSX}>{children}</CardContent>}
-      {!content && children}
+      {content ? <CardContent sx={{ px: 3, py: 2.5, ...contentSX }}>{children}</CardContent> : children}
     </Card>
   );
 }

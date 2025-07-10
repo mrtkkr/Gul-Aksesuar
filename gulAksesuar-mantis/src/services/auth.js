@@ -1,7 +1,7 @@
 import { sendApiRequest } from './network_service.js';
 import { toast } from 'react-toastify';
 
-export const login = async (email, password) => {
+export const login = async (email, password, is_staff) => {
   const PUBLIC_URL = import.meta.env.VITE_PUBLIC_URL || 'http://127.0.0.1:8000/';
   const apiUrl = PUBLIC_URL + 'login/';
 
@@ -13,7 +13,7 @@ export const login = async (email, password) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password, is_staff })
     });
 
     console.log('loginresponse', response);
@@ -69,7 +69,7 @@ export const logout = async () => {
   }
 };
 
-export const register = async ({ first_name, last_name, email, password, company }) => {
+export const register = async ({ first_name, last_name, username, email, password, company }) => {
   const PUBLIC_URL = import.meta.env.VITE_PUBLIC_URL || 'http://127.0.0.1:8000/';
   const apiUrl = PUBLIC_URL + 'register/'; // API'nde bu endpoint varsa
 
@@ -82,9 +82,10 @@ export const register = async ({ first_name, last_name, email, password, company
       body: JSON.stringify({
         first_name,
         last_name,
+        username, // Eklenen username alanı
         email,
         password,
-        company,
+        company
       })
     });
 

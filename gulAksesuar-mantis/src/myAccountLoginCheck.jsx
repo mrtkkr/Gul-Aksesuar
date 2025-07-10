@@ -6,7 +6,7 @@ import { AuthContext } from 'contexts/auth/AuthContext';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
-const LoginCheck = ({ children }) => {
+const MyAccountLoginCheck = ({ children }) => {
   const { user, isAuthenticated, fetchUser } = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   const [redirect, setRedirect] = useState(false);
@@ -24,11 +24,11 @@ const LoginCheck = ({ children }) => {
   }, [isAuthenticated, fetchUser]);
 
   useEffect(() => {
-    if (!loading && (!isAuthenticated || !user || !user.is_staff)) {
+    if (!loading && (!isAuthenticated || !user)) {
       toast.info('Lütfen giriş yapınız!');
       setRedirect(true);
     }
-  }, [loading, isAuthenticated, user, user?.is_staff]);
+  }, [loading, isAuthenticated, user]);
 
   if (loading) {
     return (
@@ -39,21 +39,12 @@ const LoginCheck = ({ children }) => {
   }
 
   if (redirect) {
-    return <Navigate to="/login" />;
-  }
-
-  // const userGroup = user.group;
-  // if (userGroup === 'CompanyEmployee') {
-  //   return <Navigate to="/company-dashboard" />;
-  // }
-  // 👇 Giriş yapılmışsa ve sadece /panel yolundaysa yönlendir:
-  if (location.pathname === '/panel') {
-    return <Navigate to="/panel/adminpanel" replace />;
+    return <Navigate to="/myAccountLoginPage" />;
   }
 
   return children;
 };
 
-LoginCheck.propTypes = { children: PropTypes.element };
+MyAccountLoginCheck.propTypes = { children: PropTypes.element };
 
-export default LoginCheck;
+export default MyAccountLoginCheck;

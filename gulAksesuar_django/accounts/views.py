@@ -67,18 +67,26 @@ def register_view(request):
     email = data.get('email')
     first_name = data.get('first_name')
     last_name = data.get('last_name')
+    username = data.get('username')  # ✨ BU EKLENSİN
     password = data.get('password')
     company_name = data.get('company')
 
-    if not email or not password or not first_name or not last_name:
+    # Zorunlu alanlar kontrolü
+    if not email or not password or not first_name or not last_name or not username:
         return Response({'message': 'Missing required fields'}, status=400)
+
+    # Admin ismini normal kullanıcı alamasın
+    if username.lower() == 'admin':
+        return Response({'message': 'Bu kullanıcı adı kullanılamaz.'}, status=400)
 
     if User.objects.filter(email=email).exists():
         return Response({'message': 'User already exists'}, status=400)
 
+    if User.objects.filter(username=username).exists():
+        return Response({'message': 'Username already exists'}, status=400)
+
     try:
         company = None
-        print(company_name)
         if company_name:
             company_instance, _ = Company.objects.get_or_create(name=company_name)
             company = company_instance
@@ -87,6 +95,7 @@ def register_view(request):
             email=email,
             first_name=first_name,
             last_name=last_name,
+            username=username,  # ✨ BURADA DA GÖNDERİLMELİ
             password=password,
             company=company
         )
@@ -96,7 +105,8 @@ def register_view(request):
         return Response({'message': f'User could not be created: {str(e)}'}, status=400)
 
     return Response({'message': 'User created successfully'})
-    
+
+
 @csrf_exempt
 @api_view(['POST'])
 def logout_view(request):

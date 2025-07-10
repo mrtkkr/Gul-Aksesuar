@@ -20,44 +20,8 @@ const HomePage = () => {
 
   return (
     <div className="bg-light ">
+      {/* visible Görünürlük için bu satırı kaldırın */}
       <header>
-        <section className="top-bar">
-          <div className="container">
-            <div className="row gy-2 align-items-center">
-              <div className="col-lg-2 col-sm-4 col-4">
-                <a href="#HomePage" className="navbar-brand">
-                  <i className="fa-solid fa-spa"></i> <span>GÜL AKSESUAR</span>
-                </a>
-              </div>
-              <div className="col-lg-5 col-sm-8 col-8 order-lg-last">
-                <div className="text-end">
-                  <a href="#" className="btn btn-light">
-                    <i className="fa fa-user"></i>
-                    <span className="ms-1 d-none d-sm-inline-block">Hesabım</span>
-                  </a>
-                  <a href="#" className="btn btn-light">
-                    <i className="fa fa-heart"></i>
-                    <span className="ms-1 d-none d-sm-inline-block">Listem</span>
-                  </a>
-                  <Link to="/myCartPage" className="btn btn-light">
-                    <i className="fa fa-shopping-cart"></i>
-                    <span className="ms-1 d-none d-sm-inline-block">Sepetim</span>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <form>
-                  <div className="input-group">
-                    <input type="text" placeholder="Anahtar Kelime" className="form-control" />
-                    <button className="btn btn-primary">
-                      <i className="fa fa-search"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
         <nav className="navbar navbar-dark background-primary navbar-expand-lg">
           <div className="container">
             <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -112,7 +76,6 @@ const HomePage = () => {
           </div>
         </nav>
       </header>
-
       <section className="mt-3 pb-3">
         <div className="container">
           <div className="card">
@@ -305,42 +268,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      <footer className="mt-3 py-4 background-primary text-white">
-        <div className="container">
-          <div className="row gy-3">
-            <div className="col-md-6 col-lg-4">
-              <form>
-                <div className="input-group">
-                  <input type="email" className="form-control" placeholder="Email Giriniz." />
-                  <button type="button" className="btn btn-outline-warning">
-                    Abone Ol
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div className="col-md-6 col-lg-8 text-end">
-              <nav className="text-center text-md-end">
-                <a href="#" className="btn btn-icon btn-outline-warning">
-                  <i className="fab fa-facebook"></i>
-                </a>
-                <a href="#" className="btn btn-icon btn-outline-warning">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="btn btn-icon btn-outline-warning">
-                  <i className="fab fa-youtube"></i>
-                </a>
-                <a href="#" className="btn btn-icon btn-outline-warning">
-                  <i className="fab fa-x"></i>
-                </a>
-              </nav>
-            </div>
-            <div className="col-12">
-              <p className="text-center text-white-100 mb-0">© 2025 Tüm hakları saklıdır</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

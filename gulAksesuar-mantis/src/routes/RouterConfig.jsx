@@ -5,6 +5,7 @@ import { AuthContext } from 'contexts/auth/AuthContext';
 // project import
 import AdminRoutes from './AdminRoutes';
 import LoginRoutes from './LoginRoutes';
+import myAccountLoginRoutes from './MyAccountLoginRoutes';
 import GeneralRoutes from './GeneralRoutes';
 
 import MinimalLayout from 'layout/MinimalLayout';
@@ -50,7 +51,9 @@ const RouterConfig = () => {
       children: [GeneralRoutes]
     };
 
-    const router = createBrowserRouter([GeneralWrapper, Wrapper, LoginRoutes], { basename: import.meta.env.VITE_APP_BASE_NAME });
+    const router = createBrowserRouter([GeneralWrapper, Wrapper, LoginRoutes, myAccountLoginRoutes], {
+      basename: import.meta.env.VITE_APP_BASE_NAME
+    });
     return <RouterProvider router={router} />;
   }
 };

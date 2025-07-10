@@ -129,7 +129,7 @@ export default function Profile() {
                               {authContext.user?.username ?? 'NONAME'}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                              {authContext.user?.is_staff ? 'Yönetici' : authContext.user?.groups[0]?.name ?? 'Kullanıcı'}
+                              {authContext.user?.is_superuser ? 'Yönetici' : authContext.user?.groups[0]?.name ?? 'Kullanıcı'}
                             </Typography>
                           </Stack>
                         </Stack>
@@ -143,6 +143,9 @@ export default function Profile() {
                       </Grid>
                     </Grid>
                   </CardContent>
+
+                  
+                  
                 </MainCard>
               </ClickAwayListener>
             </Paper>

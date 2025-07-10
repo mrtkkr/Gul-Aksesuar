@@ -17,7 +17,19 @@ export default function AuthFooter() {
       >
         <Typography variant="subtitle2" color="secondary">
           This site is protected by{' '}
-          <Typography component={Link} variant="subtitle2" href="#mantis-privacy" target="_blank" underline="hover">
+          <Typography
+            component={Link}
+            variant="subtitle2"
+            href="#mantis-privacy"
+            target="_blank"
+            underline="hover"
+            sx={{
+              color: '#AD1457', // Koyu pembe tonu
+              '&:hover': {
+                color: '#F06292' // Hover'da daha açık pembe
+              }
+            }}
+          >
             Privacy Policy
           </Typography>
         </Typography>

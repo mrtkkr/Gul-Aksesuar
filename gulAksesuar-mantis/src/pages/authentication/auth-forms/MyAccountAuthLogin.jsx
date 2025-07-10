@@ -30,7 +30,7 @@ import EyeInvisibleOutlined from '@ant-design/icons/EyeInvisibleOutlined';
 
 // ============================|| JWT - LOGIN ||============================ //
 
-export default function AuthLogin() {
+export default function MyAccountAuthLogin() {
   const navigate = useNavigate(); // Initialize useNavigate hook
   // const [checked, setChecked] = React.useState(false);
   const authContext = useContext(AuthContext); // Initialize AuthContext
@@ -44,31 +44,13 @@ export default function AuthLogin() {
   };
 
   const handleLogin = async (data) => {
-    const existingToken = localStorage.getItem('accessToken');
-
-    if (existingToken) {
-      toast.error('Zaten giriş yapılmış. Lütfen önce çıkış yapın.');
-      return;
-    }
-
-    const result = await login(data.email, data.password, data.is_staff);
+    const result = await login(data.email, data.password); // Call login function from auth.js
     console.log('result', result);
-
     if (result.success) {
-      localStorage.setItem('accessToken', result.data.token.access); // DÜZELTİLDİ
-      localStorage.setItem('refreshToken', result.data.token.refresh); // DÜZELTİLDİ
-
-      if (result.data.user && result.data.user.is_staff) {
-        toast.success('Giriş başarılı!');
-        await authContext.fetchUser();
-        navigate('/panel/adminpanel');
-        window.location.reload();
-      } else {
-        // Kullanıcı admin değilse token'ları temizle
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('refreshToken');
-        toast.error('Bu alana yalnızca yöneticiler giriş yapabilir.');
-      }
+      toast.success('Giriş başarılı!');
+      await authContext.fetchUser(); // Fetch user data
+      navigate('/'); // Redirect to home page
+      // window.location.reload();
     } else {
       toast.error(result.message);
     }
@@ -189,4 +171,4 @@ export default function AuthLogin() {
   );
 }
 
-AuthLogin.propTypes = { isDemo: PropTypes.bool };
+MyAccountAuthLogin.propTypes = { isDemo: PropTypes.bool };

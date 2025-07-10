@@ -1,5 +1,5 @@
 // material-ui
-import { useTheme } from '@mui/material/styles';
+import { useTheme, createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 
 /**
@@ -13,7 +13,33 @@ import { Typography } from '@mui/material';
 // ==============================|| LOGO SVG ||============================== //
 
 const Logo = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#C2185B', // Gül kırmızısı
+        contrastText: '#fff'
+      },
+      secondary: {
+        main: '#F8BBD0' // Pudra pembesi
+      },
+      background: {
+        default: '#FFF1F5', // Açık pembe/krem
+        paper: '#ffffff'
+      },
+      text: {
+        primary: '#880E4F', // Koyu gül rengi
+        secondary: '#AD1457'
+      }
+    },
+    typography: {
+      fontFamily: '"Playfair Display", "Roboto", "sans-serif"',
+      h3: {
+        fontWeight: 700,
+        letterSpacing: '0.5px'
+      }
+    }
+  });
 
   return (
     /**
@@ -24,7 +50,7 @@ const Logo = () => {
      */
 
     <>
-      <Typography variant="h3" color={theme.palette.primary.main}>
+      <Typography variant="h3" color={theme.palette.text.primary}>
         Gül Aksesuar
       </Typography>
       {/* <svg width="118" height="35" viewBox="0 0 118 35" fill="none" xmlns="http://www.w3.org/2000/svg">

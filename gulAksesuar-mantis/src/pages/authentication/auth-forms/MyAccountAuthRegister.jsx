@@ -31,7 +31,7 @@ import { register } from '../../../services/auth';
 
 // ============================|| JWT - REGISTER ||============================ //
 
-export default function AuthRegister() {
+export default function MyAccountAuthRegister() {
   const [level, setLevel] = useState();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -58,6 +58,7 @@ export default function AuthRegister() {
         initialValues={{
           firstname: '',
           lastname: '',
+          username: '',
           email: '',
           company: '',
           password: '',
@@ -66,6 +67,7 @@ export default function AuthRegister() {
         validationSchema={Yup.object().shape({
           firstname: Yup.string().max(255).required('First Name is required'),
           lastname: Yup.string().max(255).required('Last Name is required'),
+          username: Yup.string().max(255).required('Username is required'),
           email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
           password: Yup.string().max(255).required('Password is required')
         })}
@@ -74,6 +76,7 @@ export default function AuthRegister() {
             const result = await register({
               first_name: values.firstname,
               last_name: values.lastname,
+              username: values.username,
               email: values.email,
               password: values.password,
               company: values.company
@@ -83,7 +86,7 @@ export default function AuthRegister() {
               setErrors({ submit: result.message });
             } else {
               resetForm();
-              navigate('/login');
+              navigate('/myAccountLoginPage');
             }
           } catch (err) {
             console.error(err);
@@ -139,9 +142,32 @@ export default function AuthRegister() {
                   </FormHelperText>
                 )}
               </Grid>
+              {/* Username */}
               <Grid item xs={12}>
                 <Stack spacing={1}>
-                  <InputLabel htmlFor="company-signup">Company</InputLabel>
+                  <InputLabel htmlFor="username-signup">Username*</InputLabel>
+                  <OutlinedInput
+                    fullWidth
+                    error={Boolean(touched.username && errors.username)}
+                    id="username-signup"
+                    value={values.username}
+                    name="username"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    placeholder="hackerman21"
+                  />
+                </Stack>
+                {touched.username && errors.username && (
+                  <FormHelperText error id="helper-text-username-signup">
+                    {errors.username}
+                  </FormHelperText>
+                )}
+              </Grid>
+
+              {/* Username */}
+              <Grid item xs={12}>
+                <Stack spacing={1}>
+                  <InputLabel htmlFor="company-signup">Company( If not, you can leave it blank)</InputLabel>
                   <OutlinedInput
                     fullWidth
                     error={Boolean(touched.company && errors.company)}
@@ -172,7 +198,7 @@ export default function AuthRegister() {
                     name="email"
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="demo@company.com"
+                    placeholder="demo@gmail.com"
                     inputProps={{}}
                   />
                 </Stack>
@@ -235,13 +261,13 @@ export default function AuthRegister() {
               <Grid item xs={12}>
                 <Typography variant="body2">
                   By Signing up, you agree to our &nbsp;
-                  <Typography variant="subtitle2" component={RouterLink} to="#" sx={{ color: '#AD1457', '&:hover': { color: '#F06292' } }}>
+                  <Link variant="subtitle2" component={RouterLink} to="#">
                     Terms of Service
-                  </Typography>
+                  </Link>
                   &nbsp; and &nbsp;
-                  <Typography variant="subtitle2" component={RouterLink} to="#" sx={{ color: '#AD1457', '&:hover': { color: '#F06292' } }}>
+                  <Link variant="subtitle2" component={RouterLink} to="#">
                     Privacy Policy
-                  </Typography>
+                  </Link>
                 </Typography>
               </Grid>
               {errors.submit && (
@@ -251,19 +277,7 @@ export default function AuthRegister() {
               )}
               <Grid item xs={12}>
                 <AnimateButton>
-                  <Button
-                    variant="contained"
-                    disableElevation
-                    fullWidth
-                    size="large"
-                    type="submit"
-                    sx={{
-                      backgroundColor: '#AD1457 !important',
-                      '&:hover': {
-                        backgroundColor: '#C2185B !important'
-                      }
-                    }}
-                  >
+                  <Button disableElevation disabled={isSubmitting} fullWidth size="large" type="submit" variant="contained" color="primary">
                     Create Account
                   </Button>
                 </AnimateButton>
