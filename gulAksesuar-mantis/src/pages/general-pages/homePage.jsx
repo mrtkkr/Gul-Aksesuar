@@ -113,13 +113,13 @@ const HomePage = () => {
                   </div>
                   <div className="carousel-inner">
                     <div className="carousel-item active">
-                      <img src="http://localhost:8000/static/back_end/slider-1.jpeg" alt="slider-1" className="d-block w-100" />
+                      <img src="/images/slider-1.jpeg" alt="slider-1" className="d-block w-100" />
                     </div>
                     <div className="carousel-item">
-                      <img src="http://localhost:8000/static/back_end/slider-2.jpeg" alt="slider-2" className="d-block w-100" />
+                      <img src="/images/slider-2.jpeg" alt="slider-2" className="d-block w-100" />
                     </div>
                     <div className="carousel-item">
-                      <img src="http://localhost:8000/static/back_end/slider-3.jpeg" alt="slider-3" className="d-block w-100" />
+                      <img src="/images/slider-3.jpeg" alt="slider-3" className="d-block w-100" />
                     </div>
                   </div>
                   <button type="button" className="carousel-control-prev" data-bs-target="#slider" data-bs-slide="prev">
@@ -143,7 +143,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/1.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/1.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -164,7 +164,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/2.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/2.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -185,7 +185,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/3.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/3.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -206,7 +206,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/4.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/4.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -227,7 +227,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/5.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/5.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -248,7 +248,7 @@ const HomePage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="badge bg-success">İndirim</span>
-                  <img src="http://localhost:8000/static/back_end/6.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/6.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">

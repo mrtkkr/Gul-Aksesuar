@@ -151,7 +151,7 @@ const DetailsPage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="fa fa-regular fa-heart"></span>
-                  <img src="http://localhost:8000/static/back_end/2.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/2.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -172,7 +172,7 @@ const DetailsPage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="fa fa-regular fa-heart"></span>
-                  <img src="http://localhost:8000/static/back_end/5.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/5.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -193,7 +193,7 @@ const DetailsPage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="fa fa-regular fa-heart"></span>
-                  <img src="http://localhost:8000/static/back_end/3.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/3.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
@@ -214,7 +214,7 @@ const DetailsPage = () => {
               <div className="card shadow">
                 <div className="img-wrap">
                   <span className="fa fa-regular fa-heart"></span>
-                  <img src="http://localhost:8000/static/back_end/8.jpeg" alt="Ürün 1" className="card-img-top" />
+                  <img src="/images/8.jpeg" alt="Ürün 1" className="card-img-top" />
                 </div>
 
                 <div className="border-top info-wrap">
