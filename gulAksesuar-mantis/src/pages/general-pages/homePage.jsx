@@ -137,7 +137,7 @@ const HomePage = () => {
 
       <section className="mt-3">
         <div className="container">
-          <h3 className="h4 mb-lg-3">Son Eklenenler herkes bir eşref TEK kara geceler uzerime titreyen</h3>
+          <h3 className="h4 mb-lg-3">Son Eklenenler olm o öyle değil: Siz Hepiniz Eşref Tek ...</h3>
           <div className="row row-cols-lg-4 row-cols-md-3 row-cols-2 g-2">
             <div className="col">
               <div className="card shadow">
