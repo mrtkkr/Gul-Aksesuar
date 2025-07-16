@@ -30,42 +30,43 @@ export default function Header() {
         <section className="top-bar">
           <div className="container">
             <div className="row gy-2 align-items-center">
-              <div className="col-lg-2 col-sm-4 col-4">
+              <div className="col-lg-3 col-sm-4 col-4">
                 <a href="#HomePage" className="navbar-brand">
-                  <i className="fa-solid fa-spa"></i> <span>GÜL AKSESUAR</span>
+                  <i className="fa-solid fa-spa"></i> <span>YEŞİLKENT PEYNİRCİLİK</span>
                 </a>
               </div>
-              <div className="col-lg-5 col-sm-8 col-8 order-lg-last">
+
+              <div className="col-lg-6 col-sm-8 col-8 order-lg-last">
                 <div className="text-end">
                   {isAuthenticated ? (
                     <div className="btn-group">
                       <Link to="/myAccountPage" className="btn btn-light">
                         <i className="fa fa-user"></i>
-                        <span className="ms-1 d-none d-sm-inline-block">Hesabım</span>
+                        <span className="ms-1 d-none d-md-inline-block">Hesabım</span>
                       </Link>
                       <button onClick={handleLogout} className="btn btn-light">
                         <i className="fa fa-sign-out-alt"></i>
-                        <span className="ms-1 d-none d-sm-inline-block">Çıkış Yap</span>
+                        <span className="ms-1 d-none d-md-inline-block">Çıkış Yap</span>
                       </button>
                     </div>
                   ) : (
                     <Link to="/myAccountLoginPage" className="btn btn-light">
                       <i className="fa fa-sign-in-alt"></i>
-                      <span className="ms-1 d-none d-sm-inline-block">Giriş Yap</span>
+                      <span className="ms-1 d-none d-md-inline-block">Giriş Yap</span>
                     </Link>
                   )}
 
                   <a href="#" className="btn btn-light">
                     <i className="fa fa-heart"></i>
-                    <span className="ms-1 d-none d-sm-inline-block">Listem</span>
+                    <span className="ms-1 d-none d-md-inline-block">Listem</span>
                   </a>
                   <Link to="/myCartPage" className="btn btn-light">
                     <i className="fa fa-shopping-cart"></i>
-                    <span className="ms-1 d-none d-sm-inline-block">Sepetim</span>
+                    <span className="ms-1 d-none d-md-inline-block">Sepetim</span>
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-5">
+              <div className="col-lg-3">
                 <form>
                   <div className="input-group">
                     <input type="text" placeholder="Anahtar Kelime" className="form-control" />

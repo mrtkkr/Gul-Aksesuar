@@ -137,7 +137,7 @@ const HomePage = () => {
 
       <section className="mt-3">
         <div className="container">
-          <h3 className="h4 mb-lg-3">Son Eklenenler la yeter 50 defa degismeye gerek yok+++</h3>
+          <h3 className="h4 mb-lg-3">Son Eklenenler </h3>
           <div className="row row-cols-lg-4 row-cols-md-3 row-cols-2 g-2">
             <div className="col">
               <div className="card shadow">

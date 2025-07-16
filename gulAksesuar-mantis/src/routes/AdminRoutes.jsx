@@ -14,15 +14,16 @@ import UsersPage from 'pages/admin-pages/gulAksesuar/Users/UsersPage';
 
 import PanelProvider from 'contexts/admin/PanelContext';
 import SnippetProvider from 'contexts/admin/SnippetContext';
+import ProductProvider from 'contexts/admin/gulAksesuar/ProductContext';
 
 const AdminRoutes = {
   path: '/panel',
   element: (
     <LoginCheck>
       <PanelProvider>
-        <SnippetProvider>
+        <ProductProvider>
           <Dashboard />
-        </SnippetProvider>
+        </ProductProvider>
       </PanelProvider>
     </LoginCheck>
   ),
